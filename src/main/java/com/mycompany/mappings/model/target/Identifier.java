@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mappings.source;
+package com.mycompany.mappings.model.target;
 
-import java.util.Date;
 import lombok.Data;
 
 /**
@@ -13,10 +12,7 @@ import lombok.Data;
  * @author nefre
  */
 @Data
-public class Persona {
-    String tipoDoc;
-    Integer nroDoc;
-    String nombre;
-    String apellido;
-    Date fechaNac;
+public class Identifier {
+    String tipoDocUrl;
+    Long doc;
 }
