@@ -1,9 +1,9 @@
 ## Pruebas de mapeo de beans con distintos Framework
 
 Los framework a testear son
-- Dozer
-- Orika
-- MapStruct
+- [Dozer](http://dozer.sourceforge.net/)
+- [Orika](https://orika-mapper.github.io/orika-docs/)
+- [MapStruct](http://mapstruct.org/)
 
 Feature | Dozer | Orika | MapStruct
 ---|---|---|---

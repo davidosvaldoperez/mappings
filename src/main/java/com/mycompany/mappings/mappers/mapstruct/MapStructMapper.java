@@ -8,21 +8,28 @@ package com.mycompany.mappings.mappers.mapstruct;
 import com.mycompany.mappings.mappers.ExampleMapper;
 import com.mycompany.mappings.model.source.Persona;
 import com.mycompany.mappings.model.target.Person;
+import org.mapstruct.factory.Mappers;
 
 /**
  *
  * @author nefre
  */
-public class MapStructMapper implements ExampleMapper{
+public class MapStructMapper implements ExampleMapper {
+
+    private final PersonaPersonMapper mapper;
+
+    public MapStructMapper() {
+        mapper = Mappers.getMapper(PersonaPersonMapper.class);
+    }
 
     @Override
     public Persona fromPerson(Person person) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return mapper.personToPersona(person);
     }
 
     @Override
     public Person fromPersona(Persona persona) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return mapper.personaToPerson(persona);
     }
-    
+
 }
