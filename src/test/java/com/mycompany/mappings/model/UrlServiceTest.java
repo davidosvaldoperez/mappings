@@ -1,5 +1,6 @@
 package com.mycompany.mappings.model;
 
+import com.mycompany.mappings.model.util.UrlService;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import org.junit.Test;

@@ -1,6 +1,6 @@
 package com.mycompany.mappings.mappers.dozer;
 
-import com.mycompany.mappings.model.UrlService;
+import com.mycompany.mappings.model.util.UrlService;
 import org.dozer.CustomConverter;
 
 /**

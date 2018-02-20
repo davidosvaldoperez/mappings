@@ -1,4 +1,4 @@
-package com.mycompany.mappings.model;
+package com.mycompany.mappings.model.util;
 
 /**
  *
