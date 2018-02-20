@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+          
+    
+    <mapping type="one-way"> 
+        <class-a>com.mycompany.mappings.model.source.Persona</class-a>
+        <class-b>com.mycompany.mappings.model.target.Person</class-b>   
+        <field>
+            <a>nroDoc</a>
+            <b>identifier.doc</b>
+        </field>
+        <field custom-converter="com.mycompany.mappings.mappers.dozer.StringToUrlConverter">
+            <a>tipoDoc</a>
+            <b>identifier.tipoDocUrl</b>
+        </field>
+        <field custom-converter="com.mycompany.mappings.mappers.dozer.FechaNacToEdadConverter">
+            <a>fechaNac</a>
+            <b>edad</b>
+        </field>
+    </mapping>  
+    
+    <mapping type="one-way"> 
+        <class-a>com.mycompany.mappings.model.target.Person</class-a>   
+        <class-b>com.mycompany.mappings.model.source.Persona</class-b>
+        <field>
+            <a>identifier.doc</a>
+            <b>nroDoc</b>
+        </field>
+        <field custom-converter="com.mycompany.mappings.mappers.dozer.UrlToStringConverter">
+            <a>identifier.tipoDocUrl</a>
+            <b>tipoDoc</b>
+        </field>
+    </mapping>  
+
+</mappings> 

@@ -59,7 +59,6 @@ public class ExampleMapperTest {
         assertThat(persona.getApellido(), is("Perez"));
         assertThat(persona.getTipoDoc(), is("DNI"));
         assertThat(persona.getNroDoc(), is(33149453));
-        assertThat(persona.getFechaNac(), is(new Date(87, 6, 13)));
     }
 
     @Test
