@@ -8,7 +8,9 @@ package com.mycompany.mappings.mappers;
 import com.mycompany.mappings.mappers.dozer.DozerMapper;
 import com.mycompany.mappings.mappers.mapstruct.MapStructMapper;
 import com.mycompany.mappings.mappers.orika.OrikaMapper;
+import com.mycompany.mappings.model.source.Automovil;
 import com.mycompany.mappings.model.source.Persona;
+import com.mycompany.mappings.model.target.Car;
 import com.mycompany.mappings.model.target.Identifier;
 import com.mycompany.mappings.model.target.Person;
 import java.util.Arrays;
@@ -52,7 +54,7 @@ public class ExampleMapperTest {
         person.setIdentifier(id);
         id.setTipoDocUrl("http://documentos/dni");
         id.setDoc(33149453L);
-
+        
         Persona persona = mapper.fromPerson(person);
 
         assertThat(persona.getNombre(), is("David"));

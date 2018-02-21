@@ -9,7 +9,7 @@ import org.mapstruct.Mapping;
  *
  * @author David <david.perez@hospitalitaliano.org.ar>
  */
-@Mapper()
+@Mapper
 public interface PersonaPersonMapper {
     
     @Mapping(source = "nroDoc", target = "identifier.doc")
